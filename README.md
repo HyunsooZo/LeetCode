@@ -1,2 +1,2 @@
 # LeetCode
-Coding Problems i resolved (LeetCode)
+Coding Problems i've resolved (LeetCode)
