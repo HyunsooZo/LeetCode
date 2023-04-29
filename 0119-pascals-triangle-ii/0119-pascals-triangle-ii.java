@@ -11,10 +11,10 @@ class Solution {
                     temp.add(prev.get(j)+prev.get(j-1));
                 }
             }
-             triangle.add(temp);
             if(i==rowIndex){
                 return temp;
             }
+            triangle.add(temp);
         }
         return triangle.get(rowIndex);
     }
