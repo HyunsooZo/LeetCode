@@ -12,6 +12,9 @@ class Solution {
                 }
             }
              triangle.add(temp);
+            if(i==rowIndex){
+                return temp;
+            }
         }
         return triangle.get(rowIndex);
     }
