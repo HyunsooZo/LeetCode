@@ -6,7 +6,7 @@ class Solution {
 
     private boolean isHappyHelper(int n, HashSet<Integer> duplChk) {
         if (n == 1) return true;
-        if (n == 4 || !duplChk.add(n)) return false;
+        if (!duplChk.add(n)) return false;
         int next = 0;
         while (n != 0) {
             int digit = n % 10;
