@@ -2,12 +2,12 @@ class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> answer = new ArrayList<>();
         
-        int[] chk  = new int[nums.length+1];
-        
-        for(int i : nums) chk[i]++;
-        
-        for(int i = 1 ; i< chk.length ; i++){
-            if(chk[i]==0) answer.add(i);
+        for(int i = 0 ; i< nums.length ; i++){
+            int idx = Math.abs(nums[i])-1;
+            if(nums[idx]>0) nums[idx] = -nums[idx];
+        }
+        for(int i = 0 ; i< nums.length ; i++){
+            if(nums[i]>0) answer.add(i+1);
         }
         return answer;
     }
