@@ -1,9 +1,13 @@
 class Solution {
     public int arrangeCoins(int n) {
-        int i = 1;
-        while (n >= i) {
-            n -= i++;
+        long left = 1, right = n; 
+        while (left <= right) {
+            long mid = left + (right - left) /2;
+            long coins = mid * (mid + 1) / 2;
+            if (coins == n) return (int)mid; 
+            if (coins > n) right = mid - 1; 
+            else left = mid + 1;
         }
-        return i - 1;
+        return (int)right;
     }
 }
