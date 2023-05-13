@@ -5,9 +5,7 @@ class Solution {
         for(char c : s.toCharArray()) sb.append(c-('a'-1));
         while(k>0){
             sum = 0;
-            for(char c: sb.toString().toCharArray()){
-                sum+=Character.getNumericValue(c);
-            }
+            for(char c: sb.toString().toCharArray()) sum+=Character.getNumericValue(c);
             sb = new StringBuilder(String.valueOf(sum));
             k--;
         }
