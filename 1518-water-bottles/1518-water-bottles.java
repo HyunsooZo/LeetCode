@@ -4,7 +4,7 @@ class Solution {
         while(empty/exchange>=1){
             bottles = empty/exchange;
             reminder = empty%exchange;
-            answer = answer + bottles;
+            answer += bottles;
             empty = reminder + bottles;
         }
         return answer;
