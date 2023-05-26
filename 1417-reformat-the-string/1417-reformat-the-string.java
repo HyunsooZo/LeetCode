@@ -7,31 +7,31 @@ class Solution {
             if (Character.isDigit(c)) listNum.add(c);
             else listStr.add(c);
         }
-        
-        if(listNum.size()==1 && listStr.size()==0) return String.valueOf(listNum.get(0));
-        else if(listStr.size()==1 && listNum.size()==0 ) return String.valueOf(listStr.get(0));
-        else if (Math.abs(listNum.size() - listStr.size())>1 )  return "";
+        int nLen =listNum.size() , sLen = listStr.size();
+        if(nLen==1 && sLen==0) return String.valueOf(listNum.get(0));
+        else if(sLen==1 && nLen==0 ) return String.valueOf(listStr.get(0));
+        else if (Math.abs(nLen - sLen)>1 )  return "";
         
                   
-        if (listStr.size() > listNum.size())  isFirstDigit = true;
+        if (sLen > nLen)  isFirstDigit = true;
         
         StringBuilder sb = new StringBuilder();
         
         int i = 0, j = 0;
         
         if (isFirstDigit) {
-            while (i < listStr.size() && j < listNum.size()) {
+            while (i < sLen && j < nLen) {
                 sb.append(listStr.get(i++));
                 sb.append(listNum.get(j++));
             }
         } else {
-            while (i < listNum.size() && j < listStr.size()) {
+            while (i < nLen && j < sLen) {
                 sb.append(listNum.get(j++));
                 sb.append(listStr.get(i++));
             }
         }
-        if (i < listStr.size()) sb.append(listStr.get(i));
-        if (j < listNum.size()) sb.append(listNum.get(j));
+        if (i < sLen) sb.append(listStr.get(i));
+        if (j < nLen) sb.append(listNum.get(j));
         
         return sb.toString();
     }
