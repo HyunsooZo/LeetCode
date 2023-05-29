@@ -17,17 +17,17 @@ import java.util.*;
 
 class Solution {
     public boolean findTarget(TreeNode root, int k) {
-        List<Integer> list = new ArrayList<>();
-        return findSum(root, k, list);
+        Set<Integer> set = new HashSet<>();
+        return findSum(root, k, set);
     }
 
-    private boolean findSum(TreeNode node, int k, List<Integer> list) {
+    private boolean findSum(TreeNode node, int k, Set<Integer> set) {
         if (node == null)  return false;
 
-        if (list.contains(k - node.val)) return true;
+        if (set.contains(k - node.val)) return true;
 
-        list.add(node.val);
+        set.add(node.val);
 
-        return findSum(node.left, k, list) || findSum(node.right, k, list);
+        return findSum(node.left, k, set) || findSum(node.right, k, set);
     }
 }
