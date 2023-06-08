@@ -17,9 +17,7 @@ class Solution {
         String[] sArr = paragraph.toLowerCase().split("\\W+");
 
         for (String s : sArr) {
-            if (!s.equals("")) {
-                map.put(s.trim(), map.getOrDefault(s, 0) + 1);
-            }
+            map.put(s.trim(), map.getOrDefault(s, 0) + 1);
         }
 
         for (String s : banned) {
