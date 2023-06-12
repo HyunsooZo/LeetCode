@@ -1,13 +1,18 @@
 class Solution {
     public int firstUniqChar(String s) {
-        String[] arr = s.split("");
-        HashMap<String,Integer> map = new HashMap<>();
-        for(int i = 0 ; i < arr.length ; i++){
-            map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+        char[] arr = s.toCharArray();
+        int[] freq = new int[26];
+
+        for (int i = 0; i < arr.length; i++) {
+            freq[arr[i] - 'a']++;
         }
-        for(int i = 0 ; i < arr.length ; i++){
-            if(map.get(arr[i])==1) return i;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (freq[arr[i] - 'a'] == 1) {
+                return i;
+            }
         }
+
         return -1;
     }
 }
