@@ -22,7 +22,7 @@ class Solution {
         return true;
     }
 
-    private ListNode reverse(ListNode head) {
+    public ListNode reverse(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
 
