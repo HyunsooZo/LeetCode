@@ -10,7 +10,7 @@ class Solution {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            double sum = 0;
+            long sum = 0; // long 타입으로 변경하여 오버플로우 방지
 
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
@@ -24,10 +24,8 @@ class Solution {
                 }
             }
 
-            double average = sum / size;
-            double roundedAverage = Math.ceil(average * 100000) / 100000;  // 소수점 이하 5자리까지 올림
-            String formattedAverage = String.format("%.5f", roundedAverage);
-            result.add(Double.parseDouble(formattedAverage));
+            double average = (double) sum / size;
+            result.add(average);
         }
 
         return result;
