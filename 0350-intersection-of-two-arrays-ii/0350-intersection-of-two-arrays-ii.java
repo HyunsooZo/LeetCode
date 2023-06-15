@@ -17,6 +17,14 @@ class Solution {
                 j++;
             }
         }
-        return list.stream().mapToInt(Integer::intValue).toArray();
+        
+        
+        int[] answer = new int[list.size()];
+        int idx = 0;
+        for(int k : list){
+            answer[idx++] = k;
+        }
+        
+        return answer;
     }
 }
