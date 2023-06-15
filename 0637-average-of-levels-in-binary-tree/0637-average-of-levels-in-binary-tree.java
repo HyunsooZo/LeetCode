@@ -10,7 +10,7 @@ class Solution {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            long sum = 0; // long 타입으로 변경하여 오버플로우 방지
+            long sum = 0; 
 
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
