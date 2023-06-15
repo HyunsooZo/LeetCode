@@ -30,19 +30,13 @@ class Solution {
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 sum += node.val;
-
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
+                if (node.left != null) queue.offer(node.left);
+                if (node.right != null)queue.offer(node.right);
             }
 
             double average = (double) sum / size;
             result.add(average);
         }
-
         return result;
     }
 }
