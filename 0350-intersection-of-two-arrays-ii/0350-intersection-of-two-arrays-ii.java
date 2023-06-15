@@ -1,24 +1,30 @@
 import java.util.*;
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
- // 1. using array
-    int[] map = new int[1001]; //각 value를 index(key)로 갯수 저장 >> 1 <= nums1.length, nums2.length <= 1000
-    for(int num1 : nums1){
-        map[num1]++;
-    }
-    // check intersection
-    List<Integer> resultList = new ArrayList<>();
-    for(int num2 : nums2){
-        if(map[num2] > 0){ //교집합
-            resultList.add(num2);
-            map[num2]--;
+        List<Integer> list = new ArrayList<>();
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        
+        int i = 0 , j = 0,len1 = nums1.length , len2 = nums2.length ;
+        while(i<len1 && j<len2){
+            if(nums1[i]==nums2[j]){
+                list.add(nums1[i]);
+                i++;
+                j++;
+            }else if(nums1[i]<nums2[j]){
+                i++;
+            }else{
+                j++;
+            }
         }
-    }
-    // convert List to Array        
-    int[] result = new int[resultList.size()];
-    for (int i = 0; i < resultList.size() ; i++) {
-        result[i] = resultList.get(i);
-    }
-    return result;
+        
+        
+        int[] answer = new int[list.size()];
+        int idx = 0;
+        for(int k : list){
+            answer[idx++] = k;
+        }
+        
+        return answer;
     }
 }
