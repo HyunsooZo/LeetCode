@@ -4,9 +4,9 @@ class Solution {
         
         if (n % 2 == 0) {
             sb.append('a');
-            sb.append(String.valueOf('b').repeat(n - 1));
+            for(int i = 0 ; i < n-1 ; i++) sb.append('b');
         } else {
-            sb.append(String.valueOf('a').repeat(n));
+            for(int i = 0 ; i < n ; i++) sb.append('b');
         }
         
         return sb.toString();
