@@ -2,12 +2,14 @@ class Solution {
     public String generateTheString(int n) {
         StringBuilder sb = new StringBuilder();
         
-        if (n % 2 == 0) {
+        int a = n;
+        
+        if (n % 2 == 0){ 
             sb.append('a');
-            for(int i = 0 ; i < n-1 ; i++) sb.append('b');
-        } else {
-            for(int i = 0 ; i < n ; i++) sb.append('b');
+            a = n-1;
         }
+        
+        for(int i = 0 ; i < a ; i++) sb.append('b');
         
         return sb.toString();
     }
