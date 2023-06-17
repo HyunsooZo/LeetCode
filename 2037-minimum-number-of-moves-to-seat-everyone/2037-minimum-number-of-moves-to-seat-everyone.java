@@ -5,8 +5,8 @@ class Solution {
         Arrays.sort(seats);
         Arrays.sort(students);
 
-        int moves = 0;
-        for (int i = 0; i < seats.length; i++) {
+        int len = seats.length ,moves = 0;
+        for (int i = 0; i < len; i++) {
             moves += Math.abs(students[i] - seats[i]);
         }
 
