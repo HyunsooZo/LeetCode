@@ -1,4 +1,3 @@
-import java.util.*;
 class People implements Comparable<People> {
     String name;
     int height;
@@ -16,16 +15,19 @@ class People implements Comparable<People> {
 
 class Solution {
     public String[] sortPeople(String[] names, int[] heights) {
-        PriorityQueue<People> q = new PriorityQueue<>();
-        for(int i = 0 ; i < names.length; i++){
-            People a = new People(names[i],heights[i]);
-            q.offer(a);
+        int n = names.length;
+        People[] people = new People[n];
+        for (int i = 0; i < n; i++) {
+            people[i] = new People(names[i], heights[i]);
         }
-        String [] answer= new String[names.length];
-        int idx = 0;
-        while(!q.isEmpty()){
-            answer[idx++] = q.poll().name;
+        
+        Arrays.sort(people);
+        
+        String[] answer = new String[n];
+        for (int i = 0; i < n; i++) {
+            answer[i] = people[i].name;
         }
+        
         return answer;
     }
 }
