@@ -5,11 +5,10 @@ class Solution {
         int n = charArr.length;
         for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
-                if(charArr[i]<charArr[j] && charArr[i]%2==0 && charArr[j]%2==0){
+                if(charArr[i]<charArr[j] && charArr[i]%2==0 && charArr[j]%2==0)
                      swap(charArr,i,j);
-                }else if(charArr[i]<charArr[j] && charArr[i]%2!=0 && charArr[j]%2!=0){
+                else if(charArr[i]<charArr[j] && charArr[i]%2!=0 && charArr[j]%2!=0)
                      swap(charArr,i,j);
-                }
             }
         }
         return Integer.parseInt(new String(charArr));
