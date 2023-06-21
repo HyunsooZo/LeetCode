@@ -6,12 +6,12 @@ class Solution {
         for (int i = 1; i < s.length(); i++) {
             if (s.charAt(i) == s.charAt(i - 1)) {
                 currentPower++;
-            } else {
                 maxPower = Math.max(maxPower, currentPower);
+            } else {
                 currentPower = 1;
             }
         }
 
-        return Math.max(maxPower, currentPower);
+        return maxPower;
     }
 }
