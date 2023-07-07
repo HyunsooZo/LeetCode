@@ -1,6 +1,6 @@
 class Solution {
-    public int[] leftRigthDifference(int[] nums) {
-        int[] lSum = new int[nums.length], rSum = new int[nums.length], answer = new int[nums.length];
+    public int[] leftRightDifference(int[] nums) {
+          int[] lSum = new int[nums.length], rSum = new int[nums.length], answer = new int[nums.length];
        
         for(int i= nums.length-2 ; i>=0 ; i--){
             if(i==nums.length-2) rSum[i]= nums[i+1];
