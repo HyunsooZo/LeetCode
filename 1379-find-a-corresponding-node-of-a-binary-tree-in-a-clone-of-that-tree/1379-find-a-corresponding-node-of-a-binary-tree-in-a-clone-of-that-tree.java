@@ -15,11 +15,19 @@ class Solution {
         return finder(cloned,target);
     }
     public TreeNode finder(TreeNode head, TreeNode target) {
-        if (head.val == target.val) return head;
+        if (head.val == target.val) {
+            return head;
+        }
         TreeNode result = null;
-        if (head.left != null) result = finder(head.left, target);
-        if (result != null) return result;
-        if (head.right != null) result = finder(head.right, target);
+        if (head.left != null) {
+            result = finder(head.left, target);
+        }
+        if (result != null) {
+            return result;
+        }
+        if (head.right != null){
+            result = finder(head.right, target);  
+        } 
         return result;
     }
 }
