@@ -5,12 +5,8 @@ class Solution {
         int a = Integer.MAX_VALUE;
         int b = Integer.MIN_VALUE;
         for(int i : nums){
-            if(i<a){
-                a = i;
-            }
-            if(i>b){
-                b = i;
-            }
+            if(i<a) a = i;
+            if(i>b) b = i; 
         }
         while(answer<=0){
             if(a%b==0){
