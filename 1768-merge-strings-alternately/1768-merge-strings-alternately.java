@@ -1,21 +1,13 @@
 class Solution {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder answer = new StringBuilder();
-        Deque<Character> q1 = new LinkedList<>();
-        Deque<Character> q2 = new LinkedList<>();
-        for(char c : word1.toCharArray()){
-            q1.offer(c);
-        }
-        for(char c : word2.toCharArray()){
-            q2.offer(c);
-        }
-        int maxLen = Math.max(q1.size(),q2.size());
-        for(int i = 0 ; i < maxLen ; i++){
-            if(!q1.isEmpty()){
-                answer.append(q1.poll());
+        int len = Math.max(word1.length(),word2.length());
+        for(int i = 0 ; i < len ; i++ ){
+            if(i<word1.length()){
+                answer.append(word1.charAt(i));
             }
-            if(!q2.isEmpty()){
-                answer.append(q2.poll());
+            if(i<word2.length()){
+                answer.append(word2.charAt(i));
             }
         }
         return answer.toString();
