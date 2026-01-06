@@ -1,0 +1,75 @@
+name: LeetCode to Slack
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**/*.java'  # 어떤 경로든 .java 파일 변경 감지
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # 이전 커밋과 비교
+      
+      - name: Send new problems to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          # 변경된(새로 추가된) Java 파일 찾기
+          git diff --name-only --diff-filter=A HEAD^ HEAD | grep '\.java$' | while read file; do
+            
+            # 0001-two-sum 같은 디렉토리명 추출
+            problem_title=$(basename $(dirname "$file"))
+            file_name=$(basename "$file")
+            code=$(cat "$file" | jq -Rs .)
+            
+            jq -n \
+              --arg title "$problem_title" \
+              --arg filename "$file_name" \
+              --arg author "${{ github.actor }}" \
+              --arg url "${{ github.event.head_commit.url }}" \
+              --argjson code "$code" \
+              '{
+                text: "새 문제 풀이: \($title)",
+                blocks: [
+                  {
+                    type: "header",
+                    text: {
+                      type: "plain_text",
+                      text: "\($title)"
+                    }
+                  },
+                  {
+                    type: "section",
+                    fields: [
+                      {
+                        type: "mrkdwn",
+                        text: ("*Author:* " + $author)
+                      },
+                      {
+                        type: "mrkdwn",
+                        text: ("<" + $url + "|GitHub에서 보기>")
+                      }
+                    ]
+                  },
+                  {
+                    type: "divider"
+                  },
+                  {
+                    type: "section",
+                    text: {
+                      type: "mrkdwn",
+                      text: ("```java\n" + $code + "\n```")
+                    }
+                  }
+                ]
+              }' | curl -X POST "$SLACK_WEBHOOK_URL" \
+                   -H 'Content-Type: application/json' \
+                   -d @-
+            
+            echo "Sent: $problem_title"
+          done
