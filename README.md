@@ -7,6 +7,7 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0283-move-zeroes](https://github.com/HyunsooZo/LeetCode/tree/master/0283-move-zeroes) |
+| [1431-kids-with-the-greatest-number-of-candies](https://github.com/HyunsooZo/LeetCode/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 ## Two Pointers
 |  |
 | ------- |
