@@ -16,6 +16,7 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/HyunsooZo/LeetCode/tree/master/0002-add-two-numbers) |
+| [0007-reverse-integer](https://github.com/HyunsooZo/LeetCode/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/HyunsooZo/LeetCode/tree/master/0009-palindrome-number) |
 ## Linked List
 |  |
