@@ -7,6 +7,7 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/HyunsooZo/LeetCode/tree/master/0011-container-with-most-water) |
+| [0015-3sum](https://github.com/HyunsooZo/LeetCode/tree/master/0015-3sum) |
 | [0283-move-zeroes](https://github.com/HyunsooZo/LeetCode/tree/master/0283-move-zeroes) |
 | [1431-kids-with-the-greatest-number-of-candies](https://github.com/HyunsooZo/LeetCode/tree/master/1431-kids-with-the-greatest-number-of-candies) |
 ## Two Pointers
@@ -14,6 +15,7 @@ Coding Problems i've resolved (LeetCode)
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/HyunsooZo/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0011-container-with-most-water](https://github.com/HyunsooZo/LeetCode/tree/master/0011-container-with-most-water) |
+| [0015-3sum](https://github.com/HyunsooZo/LeetCode/tree/master/0015-3sum) |
 | [0283-move-zeroes](https://github.com/HyunsooZo/LeetCode/tree/master/0283-move-zeroes) |
 ## Math
 |  |
@@ -55,4 +57,8 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/HyunsooZo/LeetCode/tree/master/0005-longest-palindromic-substring) |
+## Sorting
+|  |
+| ------- |
+| [0015-3sum](https://github.com/HyunsooZo/LeetCode/tree/master/0015-3sum) |
 <!---LeetCode Topics End-->
