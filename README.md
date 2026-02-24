@@ -12,6 +12,7 @@ Coding Problems i've resolved (LeetCode)
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/HyunsooZo/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0011-container-with-most-water](https://github.com/HyunsooZo/LeetCode/tree/master/0011-container-with-most-water) |
 | [0283-move-zeroes](https://github.com/HyunsooZo/LeetCode/tree/master/0283-move-zeroes) |
 ## Math
@@ -38,6 +39,7 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/HyunsooZo/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0005-longest-palindromic-substring](https://github.com/HyunsooZo/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0006-zigzag-conversion](https://github.com/HyunsooZo/LeetCode/tree/master/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/HyunsooZo/LeetCode/tree/master/0008-string-to-integer-atoi) |
 | [0012-integer-to-roman](https://github.com/HyunsooZo/LeetCode/tree/master/0012-integer-to-roman) |
@@ -49,4 +51,8 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/HyunsooZo/LeetCode/tree/master/0011-container-with-most-water) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/HyunsooZo/LeetCode/tree/master/0005-longest-palindromic-substring) |
 <!---LeetCode Topics End-->
