@@ -24,6 +24,7 @@ Coding Problems i've resolved (LeetCode)
 | [0007-reverse-integer](https://github.com/HyunsooZo/LeetCode/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/HyunsooZo/LeetCode/tree/master/0009-palindrome-number) |
 | [0012-integer-to-roman](https://github.com/HyunsooZo/LeetCode/tree/master/0012-integer-to-roman) |
+| [0231-power-of-two](https://github.com/HyunsooZo/LeetCode/tree/master/0231-power-of-two) |
 ## Linked List
 |  |
 | ------- |
@@ -32,6 +33,7 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/HyunsooZo/LeetCode/tree/master/0002-add-two-numbers) |
+| [0231-power-of-two](https://github.com/HyunsooZo/LeetCode/tree/master/0231-power-of-two) |
 ## Hash Table
 |  |
 | ------- |
@@ -61,4 +63,8 @@ Coding Problems i've resolved (LeetCode)
 |  |
 | ------- |
 | [0015-3sum](https://github.com/HyunsooZo/LeetCode/tree/master/0015-3sum) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0231-power-of-two](https://github.com/HyunsooZo/LeetCode/tree/master/0231-power-of-two) |
 <!---LeetCode Topics End-->
